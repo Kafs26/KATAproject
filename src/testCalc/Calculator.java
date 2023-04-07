@@ -1,6 +1,5 @@
 package testCalc;
 
-public interface Calculator {
-    default void getDataNum(String firstData, String arithOperator, String secondData) throws Exception {
-    }
+ interface Calculator {
+     String getData(String firstData, String arithOperator, String secondData);
 }

@@ -3,7 +3,7 @@ package testCalc;
 import java.util.List;
 import java.util.TreeMap;
 
-public class Converter {
+class Converter {
     TreeMap<String, Integer> romanNumber = new TreeMap<>();
 
     public Converter() {
@@ -17,7 +17,7 @@ public class Converter {
         romanNumber.put("VIII", 8);
         romanNumber.put("IX", 9);
         romanNumber.put("X", 10);
-   }
+    }
 
     public boolean isRoman(String number) {
         return romanNumber.containsKey(number);

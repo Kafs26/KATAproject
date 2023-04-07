@@ -1,32 +1,29 @@
 package testCalc;
 
-public class ArabicCalculator implements Calculator {
+class ArabicCalculator implements Calculator {
 
     @Override
-    public void getDataNum(String xInput, String arithOperator, String yInput) throws Exception {
+    public String getData(String xInput, String arithOperator, String yInput) {
         int x = Integer.parseInt(xInput);
         int y = Integer.parseInt(yInput);
-        if (x < 0 ^ x > 10 ^ y < 0 ^ y > 10) {
-            throw new Exception();
+        if (x < 0 || x > 10 || y < 0 || y > 10) {
+            throw new IllegalArgumentException("Введенные данные не соовтетствуют требуемому диапазону");
         }
+        String result;
         switch (arithOperator) {
             case "+":
-                System.out.println(x + y);
-                break;
+                return result = Integer.toString(x + y);
             case "-":
-                System.out.println(x - y);
-                break;
+                return result = Integer.toString(x - y);
             case "*":
-                System.out.println(x * y);
-                break;
+                return result = Integer.toString(x * y);
             case "/":
                 if (y == 0) {
-                    throw new Exception();
+                    throw new IllegalArgumentException("Делить на 0 нельзя");
                 }
-                System.out.println(x / y);
-                break;
-            default: throw new Exception();
+                return result = Integer.toString(x / y);
+            default:
+                throw new IllegalArgumentException("Неизвестный оператор" + arithOperator);
         }
-
-    }
+     }
 }
