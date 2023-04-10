@@ -8,7 +8,7 @@ class Converter {
 
     public Converter() {
         romanNumber.put("I", 1);
-        romanNumber.put("II", 2);
+        //    romanNumber.put("II", 2);
         romanNumber.put("III", 3);
         romanNumber.put("IV", 4);
         romanNumber.put("V", 5);
@@ -57,6 +57,5 @@ class Converter {
             }
         }
         return result;
-
     }
 }

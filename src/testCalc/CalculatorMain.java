@@ -10,8 +10,8 @@ public class CalculatorMain {
     }
 
     public static String calc(String input1) {
-        CalculatorFactoty getNewCalculator = new CalculatorFactoty();
+        CalculatorFactoty сalculatorFactoty = new CalculatorFactoty();
         String[] split = input1.split(" ");
-        return getNewCalculator.chooseCalculatorType(input1).getData(split[0], split[1], split[2]);
+        return сalculatorFactoty.chooseCalculatorType(input1).getData(split[0], split[1], split[2]);
     }
 }
